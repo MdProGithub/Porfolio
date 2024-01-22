@@ -265,8 +265,11 @@ const isSubmitMessageHovered = ()=> {
   }
 }
 
+
+
 const submitMessage = () => { 
   if (!v$.value.message.$error && formData.message) { 
+    console.log('voici les informations:' , 'son prénom est', formData.name, 'sont e-mail' ,formData.email, 'au sujet de', formData.object, 'voici son message;', formData.message)
     messageOpen.value = false;
     setTimeout(() => {
       successMessage.value = true;
