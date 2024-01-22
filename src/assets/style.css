@@ -1,0 +1,80 @@
+@font-face {
+font-family: 'Cashrole';
+  src: url('../../public/fonts/Cashrole.woff') format('woff'),
+       url('../../public/fonts/Cashrole_1.woff') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bogista';
+  src: url('../../public/fonts/Bogista.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('../../public/fonts/OpenDyslexic-Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h3 {
+    font-family: 'OpenDyslexic';
+    
+}
+
+@font-face {
+    font-family: 'Noland_Bold';
+    src: url(../../public/fonts/Noland-Bold.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2 {
+    font-family: 'Noland_Bold';
+}
+
+@font-face {
+    font-family: 'Super Spicy';
+    src: url(../../public/fonts/Super-Spicy-Personal-Use.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Alphabet';
+    src: url('../../public/fonts/Alphabet.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Hegaris';
+    src: url('../../public/fonts/Hegaris.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p{
+    font-family: 'Hegaris';
+}
+
+@font-face {
+    font-family: 'Espresso Show';
+    src: url('../../public/fonts/Espresso-Show.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h4 {
+    font-family: 'Espresso Show' ;
+}
+
+@font-face {
+    font-family: 'Tommy';
+    src: url('../../public/fonts/MADE-Tommy-Soft-Regular-Outline-PERSONAL-USE.woff');
+    font-weight: normal;
+    font-style: normal;
+}

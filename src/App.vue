@@ -1,26 +1,51 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <router-view></router-view>
+  </div>
+  <footer>
+  <footerPart :updatedDate="formattedDate"/>
+  </footer>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import { onBeforeUpdate, ref, } from 'vue';
+import footerPart from "./components/footerPart.vue";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  
+  
+  
+  const updatedDate = ref(new Date());
+  
+  const formatDate = (date) => {
+      const optionsDate = { 
+          day: 'numeric', 
+          month: 'numeric', 
+      };
+  
+      const optionsTime = { 
+          hour: 'numeric', 
+          minute: 'numeric', 
+          hour12: false 
+      };
+  
+      const formattedDate = new Date(date).toLocaleDateString('fr-FR', optionsDate);
+      const formattedTime = new Date(date).toLocaleTimeString('fr-FR', optionsTime);
+  
+      return `${formattedDate} à ${formattedTime}`;
   }
-}
-</script>
+  
+  const updateDate = () => {
+      updatedDate.value = new Date();
+  }
+  
+  onBeforeUpdate(() => {
+    
+    updateDate();
+  })
+  
+  const formattedDate = formatDate(updatedDate.value);
+  console.log(formattedDate)
+   
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+ 
+</script>
